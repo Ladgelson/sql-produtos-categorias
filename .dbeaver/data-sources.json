@@ -1,0 +1,65 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-183104549b6-5840c8a122f1b282": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "library",
+				"url": "jdbc:postgresql://localhost:5432/library",
+				"home": "postgresql_client",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-183104549b6-5840c8a122f1b282": {
+			"library": {
+				"public": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202209052142\"><entities><data-source id=\"postgres-jdbc-1818d89f40d-6589a29824a41721\"><entity id=\"1\" name=\"author\" fq-name=\"public.author\" order=\"0\" x=\"574\" y=\"43\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"2\" name=\"book\" fq-name=\"public.book\" order=\"2\" x=\"483\" y=\"320\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"3\" name=\"book_author\" fq-name=\"public.book_author\" order=\"3\" border-width=\"3\" x=\"535\" y=\"199\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"4\" name=\"book_genre\" fq-name=\"public.book_genre\" order=\"4\" x=\"254\" y=\"341\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"5\" name=\"business_person\" fq-name=\"public.business_person\" order=\"1\" x=\"59\" y=\"20\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"6\" name=\"genre\" fq-name=\"public.genre\" order=\"5\" x=\"234\" y=\"208\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"7\" name=\"person\" fq-name=\"public.person\" order=\"6\" x=\"297\" y=\"33\"><path name=\"public\"/><path name=\"library\"/></entity><entity id=\"8\" name=\"physical_person\" fq-name=\"public.physical_person\" order=\"7\" x=\"60\" y=\"124\"><path name=\"public\"/><path name=\"library\"/></entity></data-source></entities><relations><relation name=\"fkbjqhp85wjv8vpr0beygh6jsgo\" fq-name=\"public.book_author.fkbjqhp85wjv8vpr0beygh6jsgo\" type=\"fk\" pk-ref=\"1\" fk-ref=\"3\"/><relation name=\"fkefaiya2cq8ircbi14kcarenq\" fq-name=\"public.person.fkefaiya2cq8ircbi14kcarenq\" type=\"fk\" pk-ref=\"1\" fk-ref=\"7\"/><relation name=\"fkhwgu59n9o80xv75plf9ggj7xn\" fq-name=\"public.book_author.fkhwgu59n9o80xv75plf9ggj7xn\" type=\"fk\" pk-ref=\"2\" fk-ref=\"3\"/><relation name=\"fk52evq6pdc5ypanf41bij5u218\" fq-name=\"public.book_genre.fk52evq6pdc5ypanf41bij5u218\" type=\"fk\" pk-ref=\"2\" fk-ref=\"4\"/><relation name=\"fk8l6ops8exmjrlr89hmfow4mmo\" fq-name=\"public.book_genre.fk8l6ops8exmjrlr89hmfow4mmo\" type=\"fk\" pk-ref=\"6\" fk-ref=\"4\"/><relation name=\"fkb55u440bqsc8udgu5ksm1r2q9\" fq-name=\"public.business_person.fkb55u440bqsc8udgu5ksm1r2q9\" type=\"fk\" pk-ref=\"7\" fk-ref=\"5\"/><relation name=\"fki5wkef5e0n788mi3gklulomxi\" fq-name=\"public.physical_person.fki5wkef5e0n788mi3gklulomxi\" type=\"fk\" pk-ref=\"7\" fk-ref=\"8\"/></relations></diagram>"
+						}
+					}
+				}
+			},
+			"livraria_aula_19082022": {
+				"public": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202208220918\"><entities><data-source id=\"postgres-jdbc-1818d89f40d-6589a29824a41721\"><entity id=\"1\" name=\"book\" fq-name=\"public.book\" order=\"0\" x=\"403\" y=\"25\"><path name=\"public\"/><path name=\"livraria_aula_19082022\"/></entity><entity id=\"2\" name=\"book_genre\" fq-name=\"public.book_genre\" order=\"1\" x=\"130\" y=\"140\"><path name=\"public\"/><path name=\"livraria_aula_19082022\"/></entity><entity id=\"3\" name=\"genre\" fq-name=\"public.genre\" order=\"2\" x=\"440\" y=\"269\"><path name=\"public\"/><path name=\"livraria_aula_19082022\"/></entity></data-source></entities><relations><relation name=\"book_genre_book_id_fkey\" fq-name=\"public.book_genre.book_genre_book_id_fkey\" type=\"fk\" pk-ref=\"1\" fk-ref=\"2\"/><relation name=\"book_genre_genre_id_fkey\" fq-name=\"public.book_genre.book_genre_genre_id_fkey\" type=\"fk\" pk-ref=\"3\" fk-ref=\"2\"/></relations></diagram>"
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
